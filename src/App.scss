@@ -1,0 +1,128 @@
+// VARIABLES
+$brand_primary: #0c1348;
+$main_bg: #f5f5f5;
+$input_bg: #e9f0fd;
+
+// MAIN STYLING
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Figtree', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: $brand_primary;
+    min-height: 10vh;
+
+    img.icon {
+        max-width: 6.25rem;
+    }
+}
+
+main {
+    background-color: $main_bg;
+    display: flex;
+    justify-content: center;
+    min-height: 90vh;
+
+    h2 {
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+    }
+
+    form {
+        margin-top: 10.5rem;
+        background-color: white;
+        padding: 26px 12px 16px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+
+        p {
+            margin-top: .75rem;
+            margin-bottom: .25rem;
+            color: #888484;
+        }
+
+        .form--input {
+            width: 36.5rem;
+            height: 2.25rem;
+            border-radius: 3px;
+            border: 1px solid #888484;
+            padding-left: 8px;
+            background-color: $input_bg;
+        }
+
+        .form--button {
+            margin-top: 1.75rem;
+            color: #fff;
+            height: 2.25rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 3px;
+            background-color: $brand_primary;
+            font-weight: 400;
+        }
+
+        input:focus {
+            border-color: transparent;
+            outline: 1px solid #888484;
+        }
+
+        .form--success {
+            color: green;
+        }
+
+        .form--error {
+            color: red;
+        }
+    }
+
+    .loader {
+        display: flex;
+        margin-top: 8px;
+    }
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 625px) {
+
+    .form--input,
+    .form--button {
+        width: 28rem !important;
+    }
+}
+
+@media screen and (max-width: 568px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .form--input,
+    .form--button {
+        width: 24rem !important;
+    }
+}
+
+@media screen and (max-width: 432px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .form--input,
+    .form--button {
+        width: 18rem !important;
+    }
+}
